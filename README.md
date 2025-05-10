@@ -38,7 +38,7 @@ Looking at the iterations of the inner loop accross all iterations of the outer
 loop, it'll run e times in total because each edge is one neighbor entry in the 
 adjacency list.
 
-Therefore, the total time complexity is $O(V^(2) + e)$ but since e is at most $V^2$
+Therefore, the total time complexity is $O(V^2 + e)$ but since e is at most $V^2$
 (at least in a complete graph), this can simplify further to $O(V^2)$
 
 Basically meaning that we only process existing edges when "populating the matrix" 
