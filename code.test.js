@@ -56,6 +56,16 @@ const testToAdjMatrix =
         return JSON.stringify(refMatrix) === JSON.stringify(convertedMatrix);
     });
 
+const testBidirectionalConversions =
+    jsc.forall("array (pair nat nat)", function(edges) {
+        var max = edges.reduce(function(a, b) { return Math.max(a, Math.max(b[0], b[1])); }, 0);
+
+        //create original adjmatrix
+        //convert mat to list
+        //convert list to mat
+        //check if og mat and reconverted mat match
+
+
 
 //testing convertToAdjList
 jsc.assert(test, { tests: 1000 });
