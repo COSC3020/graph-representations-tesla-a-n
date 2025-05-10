@@ -15,7 +15,7 @@ function convertToAdjMatrix(adjList) {
     var adjMatrix = [];
     for (var i = 0; i < adjList.length; i++) {
         adjMatrix[i] = [];
-        for (var j = 0; j < adjList[i].length; j++) {
+        for (var j = 0; j < adjList.length; j++) {
             adjMatrix[i][j] = 0;
         }
     }
