@@ -64,3 +64,5 @@ complexity would still be $O(V^2)$
 [Converting adjMatrix to adjList](https://www.geeksforgeeks.org/convert-adjacency-matrix-to-adjacency-list-representation-of-graph/)
 
 [Significance of edges and vertices](https://en.wikipedia.org/wiki/Dense_graph)
+
+"I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice."
