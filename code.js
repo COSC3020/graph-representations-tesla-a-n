@@ -12,10 +12,10 @@ function convertToAdjList(adjMatrix) {
 }
 
 function convertToAdjMatrix(adjList) {
-    const adjMatrix = [];
-    for (let i = 0; i < adjList.length; i++) {
+    var adjMatrix = [];
+    for (var i = 0; i < adjList.length; i++) {
         adjMatrix[i] = [];
-        for (let j = 0; j < adjList[i].length; j++) {
+        for (var j = 0; j < adjList[i].length; j++) {
             adjMatrix[i][j] = 0;
         }
     }
