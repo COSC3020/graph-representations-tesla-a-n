@@ -1,17 +1,23 @@
 function convertToAdjList(adjMatrix) {
-    adjList of 0
-    outterloop for each vertex
-        innerloop for each vertex
-            push 1
+    var adjList = [];
+    for (var i = 0; i < adjMatrix.length; i++) {
+        adjList[i] = [];
+        for (var j = 0; j < adjMatrix.length; i++) {
+            if (adjMatrix[i][j] == 1) {
+                adjList[i].push(j);
+            }
+        }
+    }
     return adjList;
 }
 
 function convertToAdjMatrix(adjList) {
-    adjMatrix of 0
-    outerloop for each vertex
-        innerloop for each vertex
-            neighbor = adjMatrix[i][j]
-            push 0 at neighbor
-            push 1 at adjMatrix[i]neighbor
-    return adjMatrix
+    const adjMatrix = new Array(adjList.length).fill().map(() => new Array(adjList.length).fill(0));
+    for (let i = 0; i < adjList.length; i++) {
+        for (let j = 0; j < adjList[i].length; j++) {
+            const neighbor = adjList[i][j];
+            adjMatrix[i][neighbor] = 1;
+        }
+    }
+    return adjMatrix;
 }
