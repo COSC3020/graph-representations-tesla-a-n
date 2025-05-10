@@ -14,8 +14,10 @@ function convertToAdjList(adjMatrix) {
 function convertToAdjMatrix(adjList) {
     const adjMatrix = new Array(adjList.length).fill().map(() => new Array(adjList.length).fill(0));
     for (let i = 0; i < adjList.length; i++) {
+        adjMatrix[i] = [];
         for (let j = 0; j < adjList[i].length; j++) {
             const neighbor = adjList[i][j];
+            neighbor = 0;
             adjMatrix[i][neighbor] = 1;
         }
     }
