@@ -1,9 +1,9 @@
 function convertToAdjList(adjMatrix) {
-    var adjList = [];
-    for (var i = 0; i < adjMatrix.length; i++) {
-        adjList[i] = [];
-        for (var j = 0; j < adjMatrix[i].length; j++) {
-            if (adjMatrix[i][j] == 1) {
+    const numVertices = adjMatrix.length;
+    const adjList = new Array(numVertices).fill().map(() => []);
+    for (let i = 0; i < numVertices; i++) {
+        for (let j = 0; j < numVertices; j++) {
+            if (adjMatrix[i][j] === 1) {
                 adjList[i].push(j);
             }
         }
@@ -11,18 +11,12 @@ function convertToAdjList(adjMatrix) {
     return adjList;
 }
 
-function convertToAdjMatrix(adjList) {
-    var adjMatrix = [];
-    for (var i = 0; i < adjList.length; i++) {
-        adjMatrix[i] = [];
-        for (var j = 0; j < adjList.length; j++) {
-            adjMatrix[i][j] = 0;
-        }
-    }
-
-    for(var i = 0; i < adjList.length; i++) {
-        for(var j = 0; j < adjList[i].length; j++) {
-            adjMatrix[i][adjMatrix[i][j]] = 1;
+function convertToAdjMatrix(adjList, numVertices) {
+    const adjMatrix = new Array(numVertices).fill().map(() => new Array(numVertices).fill(0));
+    for (let i = 0; i < adjList.length; i++) {
+        for (let j = 0; j < adjList[i].length; j++) {
+            const neighbor = adjList[i][j];
+            adjMatrix[i][neighbor] = 1;
         }
     }
     return adjMatrix;
